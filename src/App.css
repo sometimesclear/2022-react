@@ -28,6 +28,14 @@
   color: #61dafb;
 }
 
+/* 숫자맞추기 게임 css */
+.wrap {background-color: aliceblue; width:300px; margin:0 auto; text-align: center;padding: 30px; font-family: Pretendard;}
+.wrap h1 {font-family: Pretendard;}
+.wrap input {border:1px solid #ccc; border-radius: 3px;}
+.wrap button {border:none; background-color: #0453d7;  color:#fff; padding:2px;}
+/* //숫자맞추기 게임 css */
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
