@@ -6,16 +6,13 @@ function App() {
   const [status, setStatus] = useState('1~100 사이의 숫자를 맞춰보세요.');
   const [answer, setAnswer] = useState(0);
   const [rightAnswer, setRightAnswer] = useState(Math.ceil(Math.random()*100));
-  //const showCat = showCat('정답이다옹');  
+  
 
   function returnFunc(e){
     e.preventDefault();
     if(+answer === rightAnswer){
       console.log(answer)
-      setStatus("정답입니다!")
-      //showCat(function(){ 
-        // document.getElementsByClassName(imgWrap).style.visibility = visible
-      //})
+      setStatus("정답입니다!")      
       setTimeout(function(){
         resetFunc();
       }, 2000)
@@ -51,18 +48,17 @@ function App() {
           </form> 
         </div>
         
-        <div class="imgWrap" /*style={{visibility: showCat ? "visible" : "hidden"}}*/>
+        {+answer === rightAnswer ? ( //넣은 값이 정답일때 이미지 출력
+        <div class="imgWrap">
           <img 
           src={catImg}
           alt="cat"
           />
-        </div>
+        </div>) : null} 
       </div>
     );
 
 }
-
-
 
 export default App;
 
