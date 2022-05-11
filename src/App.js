@@ -1,7 +1,6 @@
 import React,{useState} from 'react';
-//import axios from 'axios';
 import './App.css';
-
+import catImg from './img/cat.jpg';
 
 function App() {
   const [status, setStatus] = useState('1~100 사이의 숫자를 맞춰보세요.');
@@ -14,10 +13,8 @@ function App() {
     if(+answer === rightAnswer){
       console.log(answer)
       setStatus("정답입니다!")
-      //showCat(function(){          
-       // axios.get('https://api.thecatapi.com/v1/images/search')            
-            
-       //     ("#cat-img").attr("src",imgUrl);                 
+      //showCat(function(){ 
+        // document.getElementsByClassName(imgWrap).style.visibility = visible
       //})
       setTimeout(function(){
         resetFunc();
@@ -44,20 +41,23 @@ function App() {
   }
 
     return (
-      <div class="wrap">
-        <form onSubmit={returnFunc}>
-          <h1>숫자 맞추기</h1>
-          <p>{status}</p>
-          <input type="number" max="100" min="1" value={answer} onChange={changeAnswer} />
-          <button>입력</button>
-        </form>
-       {/*
-        <div>
-          <img id="cat-img" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" />
+      <div>
+        <div class="wrap">
+          <form onSubmit={returnFunc}>
+            <h1>숫자 맞추기</h1>
+            <p>{status}</p>
+            <input type="number" max="100" min="1" value={answer} onChange={changeAnswer} />
+            <button>입력</button>
+          </form> 
         </div>
-      */}
+        
+        <div class="imgWrap" /*style={{visibility: showCat ? "visible" : "hidden"}}*/>
+          <img 
+          src={catImg}
+          alt="cat"
+          />
+        </div>
       </div>
-
     );
 
 }

@@ -33,6 +33,7 @@
 .wrap h1 {font-family: Pretendard;}
 .wrap input {border:1px solid #ccc; border-radius: 3px;}
 .wrap button {border:none; background-color: #0453d7;  color:#fff; padding:2px;}
+.imgWrap { margin:0 auto; text-align:center; padding-top:20px;}
 /* //숫자맞추기 게임 css */
 
 
